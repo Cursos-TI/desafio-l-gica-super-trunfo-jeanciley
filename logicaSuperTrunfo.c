@@ -34,9 +34,8 @@ int main() {
 
     printf("Digite o nome da cidade: ");
     char cidade1[50];
-    scanf(" "); // limpa qualquer caractere pendente, como '\n'
+    getchar(); // limpa qualquer caractere pendente, como '\n'
     fgets(cidade1, sizeof(cidade1), stdin);
-    cidade1[strcspn(cidade1, "\n")] = 0; //comando para remover o '\n' do final da string, assim ele não deixa uma linha em branco.
     /*
     Comando para registro do nome da cidade.
     */
@@ -103,9 +102,8 @@ int main() {
 
     printf("Digite o nome da cidade: ");
     char cidade2[50];
-    scanf(" "); // limpa qualquer caractere pendente, como '\n'
+    getchar(); // limpa qualquer caractere pendente, como '\n'
     fgets(cidade2, sizeof(cidade2), stdin);
-    cidade2[strcspn(cidade2, "\n")] = 0;
 
     printf("Digite a população da cidade: ");
     unsigned int populacao2;
