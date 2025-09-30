@@ -193,7 +193,7 @@ int main() {
         printf("Carta 2 venceu!\n");
     }
     printf("Densidade Populacional: ");
-    if ((denspop1 > denspop2) == 1) {
+    if ((denspop1 < denspop2)) { // Aqui, menor densidade é melhor
         printf("Carta 1 venceu!\n");
     } else {
         printf("Carta 2 venceu!\n");
