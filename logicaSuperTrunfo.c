@@ -169,7 +169,7 @@ int main() {
 
     printf("COMPARAÇÃO DAS CARTAS:\n");
     
-    int escolhaComparacao;
+    int escolhaComparacao1, escolhaComparacao2;
     
     printf("Escolha a categoria para comparar:\n");
     printf("[1] População\n");
@@ -178,9 +178,9 @@ int main() {
     printf("[4] Pontos Turísticos\n");
     printf("[5] Densidade Populacional\n");
     printf("Digite o número da categoria escolhida: ");
-    scanf("%d", &escolhaComparacao);
+    scanf("%d", &escolhaComparacao1);
 
-    switch (escolhaComparacao) {
+    switch (escolhaComparacao1) {
         case 1:
             if (populacao1 > populacao2) {
                 printf("Carta 1 vence na categoria População!\n");
@@ -230,6 +230,206 @@ int main() {
             printf("Opção inválida. Por favor, escolha uma categoria válida.\n");
             break;
     }
+
+    if (escolhaComparacao1 == 1) {
+        printf("Escolha a categoria para comparar:\n");
+        printf("[2] Área\n");
+        printf("[3] PIB\n");
+        printf("[4] Pontos Turísticos\n");
+        printf("[5] Densidade Populacional\n");
+        printf("Digite o número da categoria escolhida: ");
+        scanf("%d", &escolhaComparacao2);
+    } else if (escolhaComparacao1 == 2) {
+        printf("Escolha a categoria para comparar:\n");
+        printf("[1] População\n");
+        printf("[3] PIB\n");
+        printf("[4] Pontos Turísticos\n");
+        printf("[5] Densidade Populacional\n");
+        printf("Digite o número da categoria escolhida: ");
+        scanf("%d", &escolhaComparacao2);
+    } else if (escolhaComparacao1 == 3) {
+        printf("Escolha a categoria para comparar:\n");
+        printf("[1] População\n");
+        printf("[2] Área\n");
+        printf("[4] Pontos Turísticos\n");
+        printf("[5] Densidade Populacional\n");
+        printf("Digite o número da categoria escolhida: ");
+        scanf("%d", &escolhaComparacao2);
+    } else if (escolhaComparacao1 == 4) {
+        printf("Escolha a categoria para comparar:\n");
+        printf("[1] População\n");
+        printf("[2] Área\n");
+        printf("[3] PIB\n");
+        printf("[5] Densidade Populacional\n");
+        printf("Digite o número da categoria escolhida: ");
+        scanf("%d", &escolhaComparacao2);
+    } else if (escolhaComparacao1 == 5) {
+        printf("Escolha a categoria para comparar:\n");
+        printf("[1] População\n");
+        printf("[2] Área\n");
+        printf("[3] PIB\n");
+        printf("[4] Pontos Turísticos\n");
+        printf("Digite o número da categoria escolhida: ");
+        scanf("%d", &escolhaComparacao2);
+    }
+
+    switch (escolhaComparacao2) {
+        case 1:
+            if (populacao1 > populacao2) {
+                printf("Carta 1 vence na categoria População!\n");
+            } else if (populacao1 < populacao2) {
+                printf("Carta 2 vence na categoria População!\n");
+            } else {
+                printf("Empate na categoria População!\n");
+            }
+            break;
+        case 2:
+            if (area1 > area2) {
+                printf("Carta 1 vence na categoria Área!\n");
+            } else if (area1 < area2) {
+                printf("Carta 2 vence na categoria Área!\n");
+            } else {
+                printf("Empate na categoria Área!\n");
+            }
+            break;
+        case 3:
+            if (pib1 > pib2) {
+                printf("Carta 1 vence na categoria PIB!\n");
+            } else if (pib1 < pib2) {
+                printf("Carta 2 vence na categoria PIB!\n");
+            } else {
+                printf("Empate na categoria PIB!\n");
+            }
+            break;
+        case 4:
+            if (pontosTuristicos1 > pontosTuristicos2) {
+                printf("Carta 1 vence na categoria Pontos Turísticos!\n");
+            } else if (pontosTuristicos1 < pontosTuristicos2) {
+                printf("Carta 2 vence na categoria Pontos Turísticos!\n");
+            } else {
+                printf("Empate na categoria Pontos Turísticos!\n");
+            }
+            break;
+        case 5:
+            if (denspop1 < denspop2) {
+                printf("Carta 1 vence na categoria Densidade Populacional!\n");
+            } else if (denspop1 > denspop2) {
+                printf("Carta 2 vence na categoria Densidade Populacional!\n");
+            } else {
+                printf("Empate na categoria Densidade Populacional!\n");
+            }
+            break;
+        default:
+            printf("Opção inválida. Por favor, escolha uma categoria válida.\n");
+            break;
+    }
+
+    int somaCarta1, somaCarta2;
+
+    if ((escolhaComparacao1 == 1)&&(escolhaComparacao2 == 2)) {
+        somaCarta1 = populacao1 + area1;
+        somaCarta2 = populacao2 + area2;
+        if (somaCarta1 > somaCarta2) {
+            printf("Carta 1 vence na soma das categorias População e Área!\n");
+        } else if (somaCarta1 < somaCarta2) {
+            printf("Carta 2 vence na soma das categorias População e Área!\n");
+        } else {
+            printf("Empate na soma das categorias População e Área!\n");
+        }
+    } else if ((escolhaComparacao1 == 1)&&(escolhaComparacao2 == 3)) {
+        somaCarta1 = populacao1 + pib1;
+        somaCarta2 = populacao2 + pib2;
+        if (somaCarta1 > somaCarta2) {
+            printf("Carta 1 vence na soma das categorias População e PIB!\n");
+        } else if (somaCarta1 < somaCarta2) {
+            printf("Carta 2 vence na soma das categorias População e PIB!\n");
+        } else {
+            printf("Empate na soma das categorias População e PIB!\n");
+        }
+    } else if ((escolhaComparacao1 == 1)&&(escolhaComparacao2 == 4)) {
+        somaCarta1 = populacao1 + pontosTuristicos1;
+        somaCarta2 = populacao2 + pontosTuristicos2;
+        if (somaCarta1 > somaCarta2) {
+            printf("Carta 1 vence na soma das categorias População e Pontos Turísticos!\n");
+        } else if (somaCarta1 < somaCarta2) {
+            printf("Carta 2 vence na soma das categorias População e Pontos Turísticos!\n");
+        } else {
+            printf("Empate na soma das categorias População e Pontos Turísticos!\n");
+        }
+    } else if ((escolhaComparacao1 == 1)&&(escolhaComparacao2 == 5)) {
+        somaCarta1 = populacao1 + denspop1;
+        somaCarta2 = populacao2 + denspop2;
+        if (somaCarta1 > somaCarta2) {
+            printf("Carta 1 vence na soma das categorias População e Densidade Populacional!\n");
+        } else if (somaCarta1 < somaCarta2) {
+            printf("Carta 2 vence na soma das categorias População e Densidade Populacional!\n");
+        } else {
+            printf("Empate na soma das categorias População e Densidade Populacional!\n");
+        }
+    } else if ((escolhaComparacao1 == 2)&&(escolhaComparacao2 == 3)) {
+        somaCarta1 = area1 + pib1;
+        somaCarta2 = area2 + pib2;
+        if (somaCarta1 > somaCarta2) {
+            printf("Carta 1 vence na soma das categorias Área e PIB!\n");
+        } else if (somaCarta1 < somaCarta2) {
+            printf("Carta 2 vence na soma das categorias Área e PIB!\n");
+        } else {
+            printf("Empate na soma das categorias Área e PIB!\n");
+        }
+    } else if ((escolhaComparacao1 == 2)&&(escolhaComparacao2 == 4)) {
+            somaCarta1 = area1 + pontosTuristicos1;
+            somaCarta2 = area2 + pontosTuristicos2;
+            if (somaCarta1 > somaCarta2) {
+                printf("Carta 1 vence na soma das categorias Área e Pontos Turísticos!\n");
+            } else if (somaCarta1 < somaCarta2) {
+                printf("Carta 2 vence na soma das categorias Área e Pontos Turísticos!\n");
+            } else {
+                printf("Empate na soma das categorias Área e Pontos Turísticos!\n");
+            }
+    } else if ((escolhaComparacao1 == 2)&&(escolhaComparacao2 == 5)) {           
+            somaCarta1 = area1 + denspop1;
+            somaCarta2 = area2 + denspop2;
+            if (somaCarta1 > somaCarta2) {
+                printf("Carta 1 vence na soma das categorias Área e Densidade Populacional!\n");
+            } else if (somaCarta1 < somaCarta2) {
+                printf("Carta 2 vence na soma das categorias Área e Densidade Populacional!\n");
+            } else {
+                printf("Empate na soma das categorias Área e Densidade Populacional!\n");
+            }
+    } else if ((escolhaComparacao1 == 3)&&(escolhaComparacao2 == 4)) {
+            somaCarta1 = pib1 + pontosTuristicos1;
+            somaCarta2 = pib2 + pontosTuristicos2;
+            if (somaCarta1 > somaCarta2) {
+                printf("Carta 1 vence na soma das categorias PIB e Pontos Turísticos!\n");
+            } else if (somaCarta1 < somaCarta2) {
+                printf("Carta 2 vence na soma das categorias PIB e Pontos Turísticos!\n");
+            } else {
+                printf("Empate na soma das categorias PIB e Pontos Turísticos!\n");
+            }
+    } else if ((escolhaComparacao1 == 3)&&(escolhaComparacao2 == 5)) {
+            somaCarta1 = pib1 + denspop1;
+            somaCarta2 = pib2 + denspop2;
+            if (somaCarta1 > somaCarta2) {
+                printf("Carta 1 vence na soma das categorias PIB e Densidade Populacional!\n");
+            } else if (somaCarta1 < somaCarta2) {
+                printf("Carta 2 vence na soma das categorias PIB e Densidade Populacional!\n");
+            } else {
+                printf("Empate na soma das categorias PIB e Densidade Populacional!\n");
+            }
+    } else if ((escolhaComparacao1 == 4)&&(escolhaComparacao2 == 5)) {
+            somaCarta1 = pontosTuristicos1 + denspop1;
+            somaCarta2 = pontosTuristicos2 + denspop2;
+            if (somaCarta1 > somaCarta2) {
+                printf("Carta 1 vence na soma das categorias Pontos Turísticos e Densidade Populacional!\n");
+            } else if (somaCarta1 < somaCarta2) {
+                printf("Carta 2 vence na soma das categorias Pontos Turísticos e Densidade Populacional!\n");
+            } else {
+                printf("Empate na soma das categorias Pontos Turísticos e Densidade Populacional!\n");
+            }
+    } else {
+        printf("Não foi possível calcular a soma das categorias escolhidas.\n");
+    }
+
 
     return 0;
 }
